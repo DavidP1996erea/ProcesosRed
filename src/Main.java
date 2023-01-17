@@ -19,7 +19,10 @@ public class Main {
                 try {
                     // 1 - Crear un socket de tipo cliente indicando IP y puerto del servidor
                     System.out.println("Estableciendo conexión con el servidor");
-                    Socket cliente = new Socket("192.168.1.137", 49200);
+                    Socket cliente = new Socket("localhost", 50000);
+
+
+
 
                     // 2 - Abrir flujos de lectura y escritura
                     InputStream is = cliente.getInputStream();
@@ -57,5 +60,6 @@ public class Main {
                     System.err.println("Se ha producido un error en la conexión con el servidor.");
                     e.printStackTrace();
                 }
+
             }
  }
